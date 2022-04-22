@@ -4,7 +4,7 @@ This app is a create-react-app based using Spotify API
 
 ## Demo
 
-You can check the website [here](https://pip.pypa.io/en/stable/) 
+You can check the website [here](https://final-project-plum.vercel.app/) 
 
 ## Features
 
