@@ -1,0 +1,77 @@
+.logoHeader{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper{
+    margin:20px auto;
+    width: 1000px;
+}
+.profileCard{
+    display: flex;
+    flex-wrap: row wrap;
+    padding:20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.profileCard .col1{
+    flex:1;
+}
+.col1 img{
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 170px black;
+}
+.profileCard .col2{
+    padding: 0;
+    flex:2;
+    display: flex;
+    align-items: flex-end;
+}
+.profileCard .col2 .textDetail{
+    align-items: flex-end;
+    text-align: left;
+}
+.textDetail h1,h5{
+    margin:5px;
+    padding:0;
+}
+h1{
+    font-size: 100px;
+    padding:0;
+}
+h5{
+    font-size: 20px;
+}
+.playlistContainer{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+.playlistContainer h3{
+    align-items: flex-start;
+    flex:1;
+    text-align: left;
+    margin-left: 50px;
+}
+.playlistContainer .btnCreate{
+    flex:1;
+    align-items: flex-end;
+    margin: 10px 50px;
+}
+.playlistCard{
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    align-items: center;
+    justify-content: center;
+}
+.playlistBox{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding:20px;
+}
+.playlistBox img{
+    width: 200px;
+}

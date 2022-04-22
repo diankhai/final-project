@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
+import {LoginPage, Dashboard, PlaylistPage, getParamValues} from './components';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate
+} from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { saveToken, saveHash } from "./redux/action";
 
 function App() {
+  let isLogin = false;
+  const response = getParamValues(window.location.hash);
+  const getToken = response.access_token;
+  const dispatch = useDispatch();
+  dispatch(saveToken(getToken));
+
+    if (getToken){
+      isLogin=true;
+    }
+
+  const PrivateRoute = ({ children }) => {
+    return isLogin ? children : <Navigate to="/" />;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/dashboard" element={<PrivateRoute>
+                                              <Dashboard token={getToken}/>
+                                            </PrivateRoute>} />
+          <Route path="/create-playlist" element={<PrivateRoute>
+                                              <PlaylistPage/>
+                                            </PrivateRoute>} />
+      </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,29 @@
+body {
+  color: white;
+  background-image: url("https://images.pexels.com/photos/1526/dark-blur-blurred-gradient.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+.wrapper-login {
+  display: flex;
+  flex-flow: column wrap;
+  width: fit-content;
+  padding:30px;
+  background-color: rgba(236, 236, 236, 0.151);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo{
+  flex:2;
+  width:200px;
+  margin:20px;
+}
+.loginButton{
+  color:green;
+}
